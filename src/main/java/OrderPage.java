@@ -24,31 +24,31 @@ public class OrderPage {
     public void setNameFieldOrderPage(String string) {
         this.driver.findElement(this.nameFieldOrderButton).isEnabled();
         this.driver.findElement(this.nameFieldOrderButton).clear();
-        this.driver.findElement(this.nameFieldOrderButton).sendKeys(new CharSequence[]{"Иван"});
+        this.driver.findElement(this.nameFieldOrderButton).sendKeys(new CharSequence[]{name});
     }
 
     public void setSurnameFieldOrderButton(String string) {
         this.driver.findElement(this.surnameFieldOrderButton).isEnabled();
         this.driver.findElement(this.surnameFieldOrderButton).clear();
-        this.driver.findElement(this.surnameFieldOrderButton).sendKeys(new CharSequence[]{"Тюлькин"});
+        this.driver.findElement(this.surnameFieldOrderButton).sendKeys(new CharSequence[]{surname});
     }
 
     public void setAddressFieldOrderButton(String string) {
         this.driver.findElement(this.addressFieldOrderButton).isEnabled();
         this.driver.findElement(this.addressFieldOrderButton).clear();
-        this.driver.findElement(this.addressFieldOrderButton).sendKeys(new CharSequence[]{"Москва, 13-я Парковая, 27, к. 4, кв. 38"});
+        this.driver.findElement(this.addressFieldOrderButton).sendKeys(new CharSequence[]{address});
     }
 
     public void setMetroStationOrderButton(String string) {
         this.driver.findElement(this.metroStationOrderButton).click();
-        this.driver.findElement(this.metroStationOrderButton).sendKeys(new CharSequence[]{"Щёлковская"});
+        this.driver.findElement(this.metroStationOrderButton).sendKeys(new CharSequence[]{metroStation});
         this.driver.findElement(this.shel40k).click();
     }
 
     public void setPhoneNumberOrderButton(String string) {
         this.driver.findElement(this.phoneNumberOrderButton).isEnabled();
         this.driver.findElement(this.phoneNumberOrderButton).clear();
-        this.driver.findElement(this.phoneNumberOrderButton).sendKeys(new CharSequence[]{"+79991634436"});
+        this.driver.findElement(this.phoneNumberOrderButton).sendKeys(new CharSequence[]{phoneNumber});
     }
 
     public void proceedButtonOrderButtonClick() {
@@ -56,11 +56,11 @@ public class OrderPage {
     }
 
     public void fillingTheOrderForm() {
-        this.setNameFieldOrderPage("Иван");
-        this.setSurnameFieldOrderButton("Тюлькин");
-        this.setAddressFieldOrderButton("Москва, 13-я Парковая, 27, к. 4, кв. 38");
-        this.setMetroStationOrderButton("Щёлковская");
-        this.setPhoneNumberOrderButton("+79991634436");
+        this.setNameFieldOrderPage(name);
+        this.setSurnameFieldOrderButton(surname);
+        this.setAddressFieldOrderButton(address);
+        this.setMetroStationOrderButton(metroStation);
+        this.setPhoneNumberOrderButton(phoneNumber);
         this.proceedButtonOrderButtonClick();
     }
 

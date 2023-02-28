@@ -1,7 +1,11 @@
 import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HeaderTests {
     private WebDriver driver;
@@ -15,7 +19,7 @@ public class HeaderTests {
         this.driver.get("https://qa-scooter.praktikum-services.ru/");
         SamokatHomePage objHomePage = new SamokatHomePage(this.driver);
         objHomePage.logoYandexHomePageClick();
-        Thread.sleep(3000L);
+        //Thread.sleep(3000L);
         objHomePage.checkYandexMainPage();
     }
 
@@ -25,7 +29,7 @@ public class HeaderTests {
         this.driver.get("https://qa-scooter.praktikum-services.ru/");
         SamokatHomePage objHomePage = new SamokatHomePage(this.driver);
         objHomePage.logoSamokatHomePageClick();
-        Thread.sleep(3000L);
+        //Thread.sleep(3000L);
         objHomePage.checkSamokatMainPage();
     }
 
@@ -35,7 +39,7 @@ public class HeaderTests {
         this.driver.get("https://qa-scooter.praktikum-services.ru/");
         SamokatHomePage objHomePage = new SamokatHomePage(this.driver);
         objHomePage.orderButtonTopHomePageClick();
-        Thread.sleep(3000L);
+        //Thread.sleep(3000L);
         objHomePage.checkWeGetAnOrderForm();
     }
 
