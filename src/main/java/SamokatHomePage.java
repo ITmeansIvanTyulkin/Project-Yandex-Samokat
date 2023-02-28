@@ -95,7 +95,7 @@ public class SamokatHomePage {
     }
 
     public void orderButtonFloorHomePageClick() {
-        WebElement element = this.driver.findElement(By.xpath("/html/body/div/div/div/div[4]/div[2]/div[5]/button"));
+        WebElement element = this.driver.findElement(orderButtonFloorHomePage);
         ((JavascriptExecutor)this.driver).executeScript("arguments[0].scrollIntoView();", new Object[]{element});
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3L));
         this.driver.findElement(this.orderButtonFloorHomePage).click();
